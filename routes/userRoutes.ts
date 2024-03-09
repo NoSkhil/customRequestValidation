@@ -5,4 +5,8 @@ const userRoutes = Router();
 
 export default userRoutes;
 
-userRoutes.post('/details', userController.getAllUserData );
+userRoutes.get('/details', userController.getAllUserData );
+
+userRoutes.post('/insert', userController.insertUserData);
+
+userRoutes.post('/create', userController.createUserTable);
