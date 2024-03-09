@@ -5,8 +5,10 @@ const userRoutes = Router();
 
 export default userRoutes;
 
-userRoutes.get('/details', userController.getAllUserData );
+userRoutes.get('/read', userController.getAllUserData );
 
 userRoutes.post('/insert', userController.insertUserData);
 
-userRoutes.post('/create', userController.createUserTable);
+userRoutes.put('/create', userController.createUserTable);
+
+userRoutes.delete('/delete', userController.deleteUser);

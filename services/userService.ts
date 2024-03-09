@@ -33,8 +33,18 @@ const insertTables = async() =>{
     }
     };
 
+const deleteUser = async(email:string) => {
+    try{
+        return await client.query("DELETE FROM Users WHERE email=$1",[email]);
+    }catch(err) {
+        console.log(err);
+        return {err: "Request failed!"};
+    }
+}
+
 export default {
     getAllData, 
     insertUserData, 
-    insertTables
+    insertTables,
+    deleteUser
 };
