@@ -16,7 +16,6 @@ const getAllUserData = async (req:Request,res:Response,next:NextFunction) => {
 const insertUserData = async (req:Request,res:Response,next:NextFunction) => {
     try{
         const userData : CreateUserDTO = req.body;
-        console.log(userData);
         const user = await userService.insertUserData(userData);
         res.status(200).send({data:user});
     } catch (err) {
