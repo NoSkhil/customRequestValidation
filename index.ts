@@ -14,10 +14,12 @@ app.get('/', (req:Request,res:Response)=> res.status(200).send({data:"notFiverr 
 app.use('/api/user', userRoutes);
 
 app.listen(8000, async ()=>{
-    console.log("notFiverr server active on port 8000");
     client.connect((err:any)=>{
         if(err) console.log(err);
-        else console.log("Connected to supabase postgres db");
+        else {
+            console.log("Connected to supabase postgres db");
+            console.log("notFiverr server active on port 8000");
+        }
     });
 });
 

@@ -17,7 +17,6 @@ interface ValidationConfig {
   params?: PartValidationRules;
   body?: PartValidationRules;
   query?: PartValidationRules;
-  // Extend as needed for other parts like headers or cookies
 }
 
 const validateRule = (key: string, value: any, rule: ValidationRule, path = ''): string[] => {

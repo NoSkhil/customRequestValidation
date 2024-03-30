@@ -24,7 +24,7 @@ try {
 }
 };
 
-const insertTables = async() =>{
+const insertTables = async() => {
     try {
         return await client.query("CREATE TABLE Users (id varchar(255), firstName varchar(255), lastName varchar(255), phone bigint, email varchar(255), birthdate date)")
     }catch(err) {
